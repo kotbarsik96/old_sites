@@ -1,0 +1,30 @@
+// <VARIABLES>===================================================================================
+$screenSize: 1200;
+
+// colors
+$themeColor: #8B75C8;
+$themeColor-dark: #251C41;
+
+$greenIcon: #0DB10A;
+$ratingColorOff: #D4D4D4;
+$ratingColorActive: #FFC107;
+
+$borderColor: #DEDEDE;
+// <VARIABLES>===================================================================================
+
+
+// <MIXINS>======================================================================================
+@mixin adaptive-font($pcSize, $mobSize) {
+    $adaptSize: $pcSize - $mobSize;
+    $devAdaptSize: $adaptSize + $adaptSize * 0.7;
+    @media (max-width: 767px){
+        font-size: calc(#{$mobSize}px + #{$devAdaptSize} * (100vw - 320px) / #{$screenSize});
+    }
+    @media (min-width: 768px){
+        font-size: calc(#{$mobSize}px + #{$adaptSize} * (100vw/#{$screenSize}));
+    }
+}
+@mixin line-height($font-size, $line-height) {
+    line-height: calc($line-height / $font-size * 100%);
+}
+// <MIXINS>======================================================================================

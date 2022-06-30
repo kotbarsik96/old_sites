@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main class="catalogue-page">
+            <section class="catalogue-page__block catalogue-block">
+                <div class="catalogue-block__container container">
+                    <div class="catalogue-block__title">
+                        <div class="page-title">
+                            <div class="page-title__links">
+                                <a href="../html-main/index.html" class="page-title__arrow-back __icon-back-arrow"></a>
+                                <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                                <a href="../html-main/catalogue.html" class="page-title__link-back">Каталог</a>
+                            </div>
+                            <div class="page-title__title">
+                                Каталог
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalogue-block__aside">
+                        <div class="card filter">
+                            <div class="card__bottom card__side"></div>
+                            <div class="card__container spoiler-elem card__side filter__container"
+                                data-is-spoiler="max, 949">
+                                <div class="filter__title spoiler-elem__title">
+                                    <div class="filter__title-text">
+                                        Фильтр товаров
+                                    </div>
+                                    <div class="filter__title-icon __icon-filter"></div>
+                                </div>
+                                <div class="filter__main spoiler-elem__content">
+                                    <div class="filter-block filter-block--select">
+                                        <div class="select" data-dynamic-adaptive="min, 950, catalogue-block__title">
+                                            <div class="select__options-list">
+                                                <div class="select__option" data-select-value="price">
+                                                    По цене
+                                                </div>
+                                                <div class="select__option" data-select-value="popular">
+                                                    По популярности
+                                                </div>
+                                                <div class="select__option" data-select-value="name">
+                                                    По названию
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <div class="filter-block__title">
+                                            Бренд:
+                                        </div>
+                                        <div class="filter-block__list">
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="brand">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Samsung
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="brand">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Huawei
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="brand">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Meizu
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="brand">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Phillips
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="brand">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Apple AirPods
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <div class="filter-block__title">
+                                            Категория:
+                                        </div>
+                                        <div class="filter-block__list">
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="category">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Наушники-вкладыши
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="category">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Наушники Bluetooth
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="category">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Полноразмерные
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="category">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Наушники накладные
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="category">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Спортивные наушники
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block" id="range-example">
+                                        <div class="filter-block__title">
+                                            Цена:
+                                        </div>
+                                        <div class="filter-block__price-range price-range">
+                                            <div class="price-range__price" data-max-price-value="9999">
+                                                <div class="price-range__price-input">
+                                                    <input class="price-range__input price-range__input--min"
+                                                        type="text" placeholder="499">
+                                                    ₽
+                                                </div>
+                                                <div class="price-range__separator">
+                                                    –
+                                                </div>
+                                                <div class="price-range__price-input">
+                                                    <input class="price-range__input price-range__input--max"
+                                                        type="text" placeholder="8499">
+                                                    ₽
+                                                </div>
+                                            </div>
+                                            <div class="price-range__range price-range__range--double">
+                                                <div class="price-range__scale">
+                                                    <div class="price-range__bar"></div>
+                                                </div>
+                                                <div class="price-range__toggle price-range__toggle--min"></div>
+                                                <div class="price-range__toggle price-range__toggle--max"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <div class="filter-block__title">
+                                            По акции:
+                                        </div>
+                                        <div class="filter-block__list">
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="promotion">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Со скидкой
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="promotion">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    По акции
+                                                </div>
+                                            </label>
+                                            <label class="checkcircle">
+                                                <input type="checkbox" name="promotion">
+                                                <div class="checkcircle__option">
+                                                    <span></span>
+                                                    Распродажа
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__button">
+                                        <button class="button filter__clear-button">
+                                            Очистить фильтр
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @@include('../html-snippets/product-info-card.html')
+                    </div>
+                    <div id="products-app" class="catalogue-block__cards-list cards-list">
+                        <!-- товары -->
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400511"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400512"})
+                        @@include('../html-snippets/product-info-card.html')
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400513"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400514"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400515"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400516"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400517"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400518"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400519"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400520"})
+                        @@include('../html-snippets/product-card-1.html', {"vendor-code": "400521"})
+                    </div>
+                    <div class="catalogue-block__page-counter page-counter">
+                        <div class="page-counter__container">
+                            <a href="#" class="page-counter__number __active">1</a>
+                            <a href="#" class="page-counter__number">2</a>
+                            <a href="#" class="page-counter__number">3</a>
+                            <a href="#" class="page-counter__number">4</a>
+                            <a href="#" class="page-counter__dots">...</a>
+                            <a href="#" class="page-counter__number">33</a>
+                            <a href="#" class="page-counter__arrow page-counter__arrow--back __icon-back-arrow"></a>
+                            <a href="#" class="page-counter__arrow page-counter__arrow--next __icon-next-arrow"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalogue-page__block spoiler-block spoiler-block--colored-bg">
+                <div class="spoiler-block__title title">
+                    <div class="title__top">
+                        Что стоит знать
+                    </div>
+                    <div class="title__bottom title__bold">
+                        при выборе наушников
+                    </div>
+                </div>
+                <div class="spoiler-block__container container" data-spoiler="767, ../js/JSON/spoiler-content.json" data-is-accordeon>
+                    <!-- desktop -->
+                    <div class="toggler">
+                        <div class="toggler__titles">
+                            <div class="spoiler-block__title toggler__title">
+                                <div class="toggler__title--text"></div>
+                            </div>
+                        </div>
+                        <div class="toggler__content">
+                            <div class="toggler__content--subtitle toggler__content--text"></div>
+                            <p class="toggler__content--paragraph toggler__content--text"></p>
+                        </div>
+                    </div>
+                    <!-- /desktop -->
+                    <!-- mobile -->
+                    <div class="spoiler">
+                        <div class="spoiler__item">
+                            <div class="spoiler__title"></div>
+                            <div class="spoiler__content">
+                                <p class="spoiler__content--paragraph"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /mobile -->
+                </div>
+            </section>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+
+    @@include('../html-snippets/scripts-products.html')
+</body>
+
+</html>

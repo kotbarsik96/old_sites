@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main id="products-app" class="favorites-page">
+            <section class="favorites-page__container container">
+                <div class="page-title">
+                    <div class="page-title__links">
+                        <a href="../html-main/index.html" class="page-title__arrow-back __icon-back-arrow"></a>
+                        <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                        <a href="../html-products/favorites.html" class="page-title__link-back">Избранное</a>
+                    </div>
+                    <div class="page-title__title">
+                        Избранное
+                    </div>
+                </div>
+                <section class="favorites-page__cards-list cards-list">
+                    <!-- vue - если пусто -->
+                    <div class="__isempty" v-if="favorites.length === 0">
+                        Здесь ничего нет. Для добавления нажмите на иконку 
+                        <span class="icon-circle__item __icon-heart"></span>
+                        в карточке или на странице товара.
+                    </div>
+                    <!-- /vue - если пусто -->
+
+                    <!-- vue - товары -->
+                    <div class="product-card card product-card--type-2" v-for="vendorCode in favorites" :data-vendor-code="vendorCode" v-cloak>
+                        <div class="card__bottom card__side product-card__bottom"></div>
+                        <div class="card__container card__side product-card__container">
+                            <div class="product-card__icons prodcard-icons">
+                                <div class="prodcard-icons__more icon-circle">
+                                    <div class="icon-circle__item __icon-plus"></div>
+                                </div>
+                                <div class="prodcard-icons__container">
+                                    <div class="in-stock __icon-correct">
+                                        В наличии
+                                    </div>
+                                    <div class="prodcard-icons__circles">
+                                        <div class="icon-circle icon-circle--to-favorites" :class="{
+                                            '__active': products[vendorCode].isFavorite
+                                        }" @click="toggleFavorites($event)">
+                                            <div class="icon-circle__item __icon-heart"></div>
+                                        </div>
+                                        <div class="icon-circle">
+                                            <div class="icon-circle__item __icon-judge"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a :href="'../html-products/' + vendorCode + '.html'" class="product-card__image">
+                                <img :src="'../img/products/' + products[vendorCode].images[0]" alt="">
+                            </a>
+                            <a :href="'../html-products/' + vendorCode + '.html'" class="product-card__name">
+                                {{ products[vendorCode].name }}
+                            </a>
+                            <div class="product-card__info">
+                                <div class="product-card__rating rating">
+                                    <div class="rating__item __active __icon-star" v-for="star in renderRating(vendorCode).activeStars">
+                                    </div>
+                                    <div class="rating__item __icon-star" v-for="star in renderRating(vendorCode).emptyStars"></div>
+                                </div>
+                                <div class="product-card__price">
+                                    {{ products[vendorCode].price }} ₽
+                                </div>
+                            </div>
+                            <div class="product-card__buttons product-buttons" data-dynamic-adaptive="max, 992, prodcard-icons__container">
+                                <a href="../html-products/cart_oneclick.html" class="button button--colored-bg button--buy-oneclick"
+                                    @click="addToCart(vendorCode, 'oneClick')">
+                                    Купить в 1 клик
+                                </a>
+                                <button class="button button--to-cart" @click="addToCart(vendorCode, 'cart')">
+                                    В корзину
+                                </button>
+                                <a :href="'../html-products/' + vendorCode + '.html'" class="button button--colored-border">
+                                    Подробней
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /vue - товары -->
+                </section>
+            </div>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+    
+
+    @@include('../html-snippets/scripts-products.html')
+</body>
+
+</html>

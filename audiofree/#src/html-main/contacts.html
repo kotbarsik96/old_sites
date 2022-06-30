@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main class="contacts-page">
+            <div class="contacts-page__container container">
+                <section class="page-title">
+                    <div class="page-title__links">
+                        <a href="../html-main/index.html" class="page-title__arrow-back __icon-back-arrow"></a>
+                        <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                        <a href="../html-main/contacts.html" class="page-title__link-back">Контакты</a>
+                    </div>
+                </section>
+                <section class="card contacts-page__card">
+                    <div class="card__bottom card__side"></div>
+                    <div class="card__container card__side contacts-card">
+                        <div class="contacts-card__list">
+                            <div class="page-title">
+                                <div class="page-title__title">
+                                    Контакты
+                                </div>
+                            </div>
+                            <div class="contacts-card__item">
+                                <div class="contacts-block contacts-block--phone">
+                                    <div class="contacts-block__circle icon-circle">
+                                        <a class="contacts-block__icon icon-circle__item __icon-phone"
+                                            href="../tel: +78005519202"></a>
+                                    </div>
+                                    <div class="contacts-block__text">
+                                        <div class="contacts-block__title">Бесплатный звонок по РФ</div>
+                                        <div class="contacts-block__info">
+                                            <a href="tel: +78005519202">8 800 551-92-02</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-card__item">
+                                <div class="contacts-block">
+                                    <div class="contacts-block__circle icon-circle">
+                                        <span class="contacts-block__icon icon-circle__item __icon-gps"></span>
+                                    </div>
+                                    <div class="contacts-block__text">
+                                        <div class="contacts-block__title">Санкт-Петербург</div>
+                                        <div class="contacts-block__info">
+                                            <span>Дачный пр. 21</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-card__item">
+                                <div class="contacts-block">
+                                    <div class="contacts-block__circle icon-circle">
+                                        <span class="contacts-block__icon icon-circle__item __icon-mail"></span>
+                                    </div>
+                                    <div class="contacts-block__text">
+                                        <div class="contacts-block__title">По всем вопросам пишите:</div>
+                                        <div class="contacts-block__info">
+                                            <span>hello@audiofree.ru</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts-card__item">
+                                <div class="contacts-block contacts-block--data">
+                                    <div class="contacts-block__circle icon-circle">
+                                        <span class="contacts-block__icon icon-circle__item __icon-next-arrow"></span>
+                                    </div>
+                                    <div class="contacts-block__text">
+                                        <div class="contacts-block__title">Данные юридического лица:</div>
+                                        <div class="contacts-block__info">
+                                            <p>ИП: Серегинская</p>
+                                            <p>ИНН: 71234567890</p>
+                                            <p>ОГРН: 312345678901234</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-card__feedback">
+                            <div class="contacts-card__title">
+                                Напишите нам:
+                            </div>
+                            <div class="contacts-card__subtitle">
+                                Заполните форму, наши специалисты, свяжутся с Вами в течении 15 минут
+                            </div>
+                            <form class="contacts-card__inputs" name="contacts-user">
+                                <div class="text-input">
+                                    <div class="text-input__text">
+                                        <input type="text" name="contacts-user" placeholder="Введите Ваше имя">
+                                    </div>
+                                </div>
+                                <div class="text-input">
+                                    <div class="text-input__text">
+                                        <input type="tel" name="contacts-user" placeholder="Введите Ваш телефон">
+                                    </div>
+                                </div>
+                                <div class="text-input text-input--submit">
+                                    <button class="text-input__submit button button--colored-bg">
+                                        <input type="submit" name="contacts-user" value="Отправить">
+                                    </button>
+                                    <div class="text-input__message">
+                                        Нажимая кнопку "Отправить" Вы даёте свое согласие на обработку введенной
+                                        персональной информации
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+
+
+    @@include('../html-snippets/scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<div class="product-card card product-card--type-1" data-vendor-code="@@vendor-code" v-cloak>
+    <div class="card__bottom card__side product-card__bottom"></div>
+    <div class="card__container card__side product-card__container">
+        <div class="product-card__icons prodcard-icons">
+            <div class="prodcard-icons__more icon-circle" @click="openCardIcons($event)">
+                <div class="icon-circle__item __icon-plus"></div>
+            </div>
+            <div class="prodcard-icons__container">
+                <div class="in-stock __icon-correct">
+                    В наличии
+                </div>
+                <div class="prodcard-icons__circles">
+                    <div class="icon-circle icon-circle--to-favorites" :class="{
+                        '__active': products['@@vendor-code'].isFavorite
+                    }" @click="toggleFavorites($event)">
+                        <div class="icon-circle__item __icon-heart"></div>
+                    </div>
+                    <div class="icon-circle">
+                        <div class="icon-circle__item __icon-judge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="../html-products/@@vendor-code.html" class="product-card__image">
+            <img :src="'../img/products/' + products['@@vendor-code'].images[0]" alt="">
+        </a>
+        <a href="../html-products/@@vendor-code.html" class="product-card__name">
+            {{ products['@@vendor-code'].name }}
+        </a>
+        <div class="product-card__info">
+            <div class="product-card__rating rating">
+                @@include('../html-snippets/rating.html', {'vendor-code': @@vendor-code})
+            </div>
+            <div class="product-card__price">
+                {{ products['@@vendor-code'].price.toLocaleString() }} ₽
+            </div>
+        </div>
+        <div class="product-card__buttons product-buttons" data-dynamic-adaptive="max, 992, prodcard-icons__container">
+            <a href="../html-products/cart_oneclick.html" class="button button--colored-bg button--buy-oneclick"
+                @click="addToCart(@@vendor-code, 'oneClick')">
+                Купить в 1 клик
+            </a>
+            <button class="button button--to-cart" @click="addToCart(@@vendor-code, 'cart')">
+                В корзину
+            </button>
+        </div>
+    </div>
+</div>

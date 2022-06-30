@@ -1,0 +1,43 @@
+<div class="product-card card product-card--type-3" data-vendor-code="@@vendor-code" v-cloak>
+    <div class="card__bottom card__side product-card__bottom"></div>
+    <div class="card__container card__side product-card__container">
+        <div class="product-card__icons prodcard-icons">
+            <div class="prodcard-icons__more icon-circle" @click="openCardIcons($event)">
+                <div class="icon-circle__item __icon-plus"></div>
+            </div>
+            <div class="prodcard-icons__container">
+                <div class="prodcard-icons__circles">
+                    <div class="icon-circle icon-circle--text prodcard-icons__sale">
+                        <div class="icon-circle__item">
+                            -15%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="../html-products/@@vendor-code.html" class="product-card__image">
+            <img :src="'../img/products/' + products['@@vendor-code'].images[0]" alt="">
+        </a>
+        <a href="../html-products/@@vendor-code.html" class="product-card__name">
+            {{ products['@@vendor-code'].name }}
+        </a>
+        <div class="product-card__info">
+            <div class="product-card__time prodcard-time" data-dynamic-adaptive="max, 992, prodcard-icons__container">
+                <div class="prodcard-time__icon-circle icon-circle icon-circle--text">
+                    <div class="icon-circle__item">
+                        <div class="icon-circle__bold">50</div>
+                        <div class="icon-circle__small">Дней</div>
+                    </div>
+                </div>
+                <div class="prodcard-time__text">
+                    До конца акции на этот товар осталось:
+                </div>
+            </div>
+        </div>
+        <div class="product-card__buttons product-buttons" data-dynamic-adaptive="max, 992, prodcard-icons__container">
+            <a href="../html-products/@@vendor-code.html" class="button button--colored-border">
+                Подробней
+            </a>
+        </div>
+    </div>
+</div>

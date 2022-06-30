@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main class="order-page">
+            <div class="order-page__container container">
+                <div class="page-title">
+                    <div class="page-title__links">
+                        <a href="../html-products/cart.html" class="page-title__arrow-back __icon-back-arrow"></a>
+                        <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                        <a href="../html-products/cart.html" class="page-title__link-back">Корзина</a>
+                        <a href="../html-products/order-page.html" class="page-title__link-back">Оформление заказа</a>
+                    </div>
+                    <div class="page-title__title">
+                        Оформите заказ
+                    </div>
+                </div>
+                <section class="order-block">
+                    <div class="order-block__container ">
+                        <div class="order-block__item orbl-item">
+                            <div class="orbl-item__title">
+                                <div class="orbl-item__title-number">
+                                    01
+                                </div>
+                                <div class="orbl-item__title-text">
+                                    Личные данные
+                                </div>
+                            </div>
+                            <div class="orbl-item__body">
+                                <div class="orbl-item__list">
+                                    <div class="text-input">
+                                        <div class="text-input__text">
+                                            <input type="text" placeholder="Имя">
+                                        </div>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__text">
+                                            <input type="email" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__text">
+                                            <input type="tel" placeholder="Телефон">
+                                        </div>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__text">
+                                            <input type="text" placeholder="Город">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orbl-item__block">
+                                    <div class="text-input orbl-item__block-body">
+                                        <textarea name="order-comment" rows="7" placeholder="Комментарий к заказу"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-block__item orbl-item">
+                            <div class="orbl-item__title">
+                                <div class="orbl-item__title-number">
+                                    02
+                                </div>
+                                <div class="orbl-item__title-text">
+                                    Доставка
+                                </div>
+                            </div>
+                            <div class="orbl-item__body">
+                                <div class="orbl-item__list">
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-delivery">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Доставка в пределах города
+                                        </div>
+                                    </label>
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-delivery">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Доставка за пределы города
+                                        </div>
+                                    </label>
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-delivery">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Самовывоз
+                                        </div>
+                                    </label>
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-delivery">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Экспресс доставка
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="orbl-item__block">
+                                    <div class="text-input orbl-item__block-body">
+                                        <textarea name="order-address" placeholder="Адрес доставки" rows="7"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-block__item orbl-item">
+                            <div class="orbl-item__title">
+                                <div class="orbl-item__title-number">
+                                    03
+                                </div>
+                                <div class="orbl-item__title-text">
+                                    Оплата
+                                </div>
+                            </div>
+                            <div class="orbl-item__body orbl-item__body--divided">
+                                <div class="orbl-item__list">
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-payment">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Оплата наличными
+                                        </div>
+                                    </label>
+                                    <label class="checkcircle">
+                                        <input type="radio" name="order-payment">
+                                        <div class="checkcircle__option">
+                                            <span></span>
+                                            Оплата банковской картой
+                                        </div>
+                                    </label>
+                                </div>
+                                <div id="cart-app" class="orbl-item__block">
+                                    <div class="orbl-item__block-body">
+                                        <div class="orbl-item__sum">
+                                            <div class="orbl-item__sum-text">
+                                                Сумма заказа:
+                                            </div>
+                                            <div class="orbl-item__sum-number total-sum-products">
+                                                {{ totalPrice.toLocaleString() }} ₽
+                                            </div>
+                                        </div>
+                                        <div class="orbl-item__sum">
+                                            <div class="orbl-item__sum-text">
+                                                Сумма доставки:
+                                            </div>
+                                            <div class="orbl-item__sum-number total-sum-delivery" data-total-sum-delivery="0">
+                                                0 ₽
+                                            </div>
+                                        </div>
+                                        <div class="orbl-item__sum">
+                                            <div class="orbl-item__sum-text">
+                                                Итого:
+                                            </div>
+                                            <div class="orbl-item__sum-number total-sum-all">
+                                                {{ totalPrice.toLocaleString() }} ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="order-button">
+                    <a href="../html-products/order-page.html" class="button button--colored-bg">
+                        Оформить заказ
+                    </a>
+                </section>
+            </div>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+    
+
+    @@include('../html-snippets/scripts-products.html')
+</body>
+
+</html>

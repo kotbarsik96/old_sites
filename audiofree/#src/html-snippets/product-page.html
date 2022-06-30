@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main class="product-page">
+            <div id="products-app">
+                <section class="product-block" data-vendor-code="@@vendor-code">
+                    <div class="product-block__container container">
+                        <div class="product-main">
+                            <div class="product-main__page-title page-title">
+                                <div class="page-title__links">
+                                    <a href="../html-main/index.html"
+                                        class="page-title__arrow-back __icon-back-arrow"></a>
+                                    <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                                    <a href="../html-main/catalogue.html" class="page-title__link-back">Каталог</a>
+                                    <a href="../html-products/@@vendor-code.html" class="page-title__link-back">{{
+                                        products['@@vendor-code'].name }}</a>
+                                </div>
+                            </div>
+
+                            <div class="product-main__pictures" v-if="imageViewingMedia === 'usual'">
+                                <div class="product-main__image big-image">
+                                    <div class="product-main__icons">
+                                        <div class="in-stock __icon-correct">
+                                            В наличии
+                                        </div>
+                                        <div class="product-main__icons-container">
+                                            <div class="icon-circle icon-circle--text icon-circle--sale">
+                                                <div class="icon-circle__item">-15%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img :src="products['@@vendor-code']['image-current']" alt="Фото товара">
+                                </div>
+                                <div class="product-main__small-images small-images">
+                                    <div class="product-main__small-image small-image"
+                                        v-for="(image, index) in products['@@vendor-code'].images">
+                                        <img :src="'../img/products/' + products['@@vendor-code'].images[index]"
+                                            @click="setCurrentImage($event)" alt="Фото товара">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-main__pictures" v-if="imageViewingMedia === 'slider'">
+                                <div class="product-main__image big-image prodpage-slider swiper">
+                                    <div class="product-main__icons">
+                                        <div class="in-stock __icon-correct">
+                                            В наличии
+                                        </div>
+                                        <div class="product-main__icons-container">
+                                            <div class="icon-circle icon-circle--text icon-circle--sale">
+                                                <div class="icon-circle__item">-15%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prodpage-slider__wrapper swiper-wrapper">
+                                        <div class="prodpage-slider__slide swiper-slide"
+                                            v-for="(image, index) in products['@@vendor-code'].images">
+                                            <img :src="'../img/products/' + products['@@vendor-code'].images[index]"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" product-main__name">
+                                {{ products['@@vendor-code'].name }}
+                            </div>
+                            <div class="product-main__rating">
+                                <div class="rating">
+                                    @@include('../html-snippets/rating.html', {'vendor-code': @@vendor-code})
+                                </div>
+                                <div class="product-main__vendor-code vendor-code"
+                                    data-dynamic-adaptive="min, 1170, product-info" data-insert-type="prepend, append">
+                                    Артикул: <span class="vendor-code__number">@@vendor-code</span>
+                                </div>
+                            </div>
+                            <div class="product-main__price">
+                                <div class="product-main__price--current">
+                                    {{ products['@@vendor-code'].price }} ₽
+                                </div>
+                                <div class="product-main__price--old" v-if="products['@@vendor-code']['old-price']">
+                                    {{ products['@@vendor-code']['old-price'] }}
+                                </div>
+                            </div>
+                            <div class="product-main__controls controls">
+                                <div class="controls__block" data-option-name="amount">
+                                    <div class="controls__title">
+                                        Количество:
+                                    </div>
+                                    <div class="controls__amount">
+                                        <div class="controls__amount--less controls__amount-button __icon-back-arrow">
+                                        </div>
+                                        <div class="controls__amount--number">
+                                            <input type="text" value="1" maxlength="2">
+                                        </div>
+                                        <div class="controls__amount--more controls__amount-button __icon-next-arrow">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="controls__block"
+                                    v-for="(option, optKey) in products['@@vendor-code'].options"
+                                    :data-option-name="optKey">
+                                    <div class="controls__title">
+                                        {{ option.name }}:
+                                    </div>
+                                    <div class="controls__options">
+                                        <label class="controls__option checkcircle"
+                                            v-for="(optionItem, index) in option.list">
+                                            <input v-if="index === 0" type="radio" :name="'product-' + optKey"
+                                                :value="optionItem" checked>
+                                            <input v-else type="radio" :name="'product-' + optKey" :value="optionItem">
+                                            <div class="checkcircle__option">
+                                                <span></span>
+                                                <span class="product-option__text">
+                                                    {{ optionItem }}
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-main__buttons product-buttons">
+                                <a href="../html-products/cart_oneclick.html"
+                                    class="button button--colored-bg button--buy-oneclick"
+                                    @click="addToCart(@@vendor-code, 'oneClick', true)">
+                                    Купить в 1 клик
+                                </a>
+                                <button class="button button--to-cart" @click="addToCart(@@vendor-code, 'cart', true)">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info__icons prodinfo-icons">
+                                <div class="prodinfo-icons__warning">
+                                    <div class="icon-circle icon-circle--warning"></div>
+                                    <div class="prodinfo-icons__warning-text">
+                                        До конца акции осталось: <span class="bold-text">3 дня</span>
+                                    </div>
+                                </div>
+                                <div class="prodinfo-icons__container">
+                                    <div class="icon-circle">
+                                        <div class="icon-circle__item __icon-judge"></div>
+                                    </div>
+                                    <div class="icon-circle icon-circle--to-favorites" :class="{
+                                        '__active': products['@@vendor-code'].isFavorite
+                                    }" @click="toggleFavorites($event)">
+                                        <div class="icon-circle__item __icon-heart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__info-block info-block">
+                                <div class="info-block__item">
+                                    <div class="info-block__title">
+                                        Доставка:
+                                    </div>
+                                    <div class="info-block__option info-block__option--purple __icon-correct">
+                                        Санкт-Петербург
+                                    </div>
+                                    <div class="info-block__option info-block__option--purple __icon-correct">
+                                        Ленинградская область
+                                    </div>
+                                    <div class="info-block__option info-block__option--purple __icon-correct">
+                                        Россия
+                                    </div>
+                                </div>
+                                <div class="info-block__item">
+                                    <div class="info-block__title">
+                                        Варианты оплаты:
+                                    </div>
+                                    <div class="info-block__option info-block__option--yellow __icon-correct">
+                                        Наличными
+                                    </div>
+                                    <div class="info-block__option info-block__option--yellow __icon-correct">
+                                        Оплата картой
+                                    </div>
+                                    <div class="info-block__option info-block__option--yellow __icon-correct">
+                                        Оплата по счету
+                                    </div>
+                                </div>
+                                <div class="info-block__item">
+                                    <div class="info-block__title">
+                                        Наши преимущества:
+                                    </div>
+                                    <div class="info-block__option info-block__option--green __icon-correct">
+                                        Гарантии
+                                    </div>
+                                    <div class="info-block__option info-block__option--green __icon-correct">
+                                        Возврат и обмен
+                                    </div>
+                                    <div class="info-block__option info-block__option--green __icon-correct">
+                                        Лучшая цена
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="product-page__spoiler-block spoiler-block">
+                    <div class="spoiler-block__container container" data-inside-app data-spoiler="767, ../js/JSON/product-description.json">
+                        <!-- desktop -->
+                        <div class="toggler toggler--vertical">
+                            <div class="toggler__titles">
+                                <div class="toggler__title">
+                                    <div class="toggler__title--text"></div>
+                                </div>
+                            </div>
+                            <div class="toggler__content" data-spbl-render="paragraphs">
+                                <div class="toggler__content--subtitle toggler__content--text"></div>
+                                <p class="toggler__content--paragraph toggler__content--text"></p>
+                            </div>
+                        </div>
+                        <!-- /desktop -->
+                        <!-- mobile -->
+                        <div class="spoiler">
+                            <div class="spoiler__item">
+                                <div class="spoiler__title"></div>
+                                <div class="spoiler__content" data-spbl-render="paragraphs">
+                                    <p class="spoiler__content--paragraph"></p>
+                                </div>
+                                <div class="spoiler__content specs" data-spbl-render="specs">
+                                    <div class="specs__item">
+                                        <div class="specs__name"></div>
+                                        <div class="specs__content"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /mobile -->
+                    </div>
+                </section>
+                <section class="product-page__recommends container">
+                    <div class="page-title">
+                        <div class="page-title__title">
+                            Вас заинтересуют
+                        </div>
+                    </div>
+                    <div class="product-page__cards-list cards-list">
+                        @@include('../html-snippets/product-card-1.html', {'vendor-code': '@@vendor-code-reccomended-1'})
+                        @@include('../html-snippets/product-card-1.html', {'vendor-code': '@@vendor-code-reccomended-2'})
+                        @@include('../html-snippets/product-card-1.html', {'vendor-code': '@@vendor-code-reccomended-3'})
+                        @@include('../html-snippets/product-card-1.html', {'vendor-code': '@@vendor-code-reccomended-4'})
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+
+
+    @@include('../html-snippets/scripts-products.html')
+</body>
+
+</html>

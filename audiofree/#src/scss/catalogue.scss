@@ -1,0 +1,177 @@
+// <CATALOGUE-BLOCK>==================================================================================
+.catalogue-block {
+
+    &__cards-list{
+        .card{
+            padding: 0; 
+        }
+    }
+
+    // !MOBILE!
+    @media (max-width: 459px){
+        &__cards-list{
+            .card{
+                flex: 0 0 100%;
+            }
+        }
+    }
+    @media (max-width: 949px){
+        padding: 0 0 30px 0;
+        .filter{
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        &__aside{
+            .product-info-card{
+                display: none;
+            }
+        }
+
+        &__cards-list{
+            .card{
+                flex: 0 0 47%;
+            }
+        }
+
+        &__page-counter{
+            margin-top: 30px;
+        }
+    }
+
+    // !DESKTOP!
+    @media (min-width: 950px){
+        padding: 0 0 105px 0;
+
+        &__container {
+            display: grid;
+            grid-template-areas: 
+                'catalogue-aside catalogue-title'
+                'catalogue-aside catalogue-list'
+                '............... catalogue-page-counter';
+            grid-template-columns: 270px 1fr;
+            grid-template-rows: .01fr 1fr .01fr;
+            align-items: flex-start;
+            grid-gap: 30px;
+        }
+    
+        &__title {
+            grid-area: catalogue-title;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .select{
+                flex: 0 0 270px;
+            }
+            .page-title{
+                margin-bottom: 0;
+            }
+        }
+    
+        &__aside {
+            grid-area: catalogue-aside;
+            .filter{
+                margin-bottom: 30px;
+            }
+        }
+    
+        &__cards-list {
+            grid-area: catalogue-list;
+            justify-content: space-between;
+            .card{
+                flex: 0 0 47%;
+            }
+            @media (min-width: 1200px){
+                .card{
+                    flex: 0 0 285px;
+                }
+            }
+        }
+
+        &__page-counter{
+            grid-area: catalogue-page-counter;
+        }
+
+        .filter-block--select{
+            display: none;
+        }
+    }
+}
+// <CATALOGUE-BLOCK>==================================================================================
+
+// <FILTER>===========================================================================================
+.filter {
+    color: #353535;
+
+    .card__bottom {
+        bottom: -35px;
+    }
+
+    &__container{
+        background: #fff;
+        padding: 25px 0 65px 0;
+    }
+    &__title,
+    .filter-block {
+        padding-left: 20px;
+        padding-right: 25px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    &__title-text {
+        font-weight: 500;
+        font-size: 20px;
+        @include line-height(20, 28);
+    }
+
+    &__title-icon {
+        font-size: 28px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            border: 2px solid $themeColor;
+            margin: 0 auto;
+            padding: 17px 50px;
+            font-size: 16px;
+            @include line-height(16, 19);
+        }
+    }
+}
+.filter-block {
+    padding-top: 45px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+    width: 100%;
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        @include line-height(18, 27);
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        font-size: 14px;
+        @include line-height(14, 40);
+    }
+}
+
+@media (max-width: 949px) {
+    .filter {
+        .card__bottom {
+            display: none;
+        }
+    }
+}
+// <FILTER>===========================================================================================

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <title>AudioFreeDesign</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('../html-snippets/header.html')
+
+        <main id="cart-app" class="cart-page">
+            <div class="cart-page__container container">
+                <section class="page-title">
+                    <div class="page-title__links">
+                        <a href="../html-main/index.html" class="page-title__arrow-back __icon-back-arrow"></a>
+                        <a href="../html-main/index.html" class="page-title__link-back">Главная</a>
+                        <a href="../html-products/cart.html" class="page-title__link-back">Корзина</a>
+                    </div>
+                    <div class="page-title__title">
+                        Корзина
+                    </div>
+                </section>
+                <section class="cart-page__body">
+                    <div class="cart-list">
+                        <div class="cart-list__titles ctlt-titles" :style="{
+                            display: cartIsEmpty ? 'none' : ''
+                        }">
+                            <div class="cart-list__title ctlt-titles__image"></div>
+                            <div class="cart-list__title ctlt-titles__name">
+                                Название товара:
+                            </div>
+                            <div class="cart-list__title ctlt-titles__price">
+                                Цена за штуку:
+                            </div>
+                            <div class="cart-list__title ctlt-titles__amount">
+                                Количество:
+                            </div>
+                            <div class="cart-list__title ctlt-titles__total">
+                                Сумма:
+                            </div>
+                            <div class="cart-list__title ctlt-titles__cancel"></div>
+                        </div>
+                        <div class="cart-list__container">
+                            <div class="__isempty" v-if="cartIsEmpty">
+                                Корзина пуста. <a href="../html-main/catalogue.html">Подобрать что-нибудь</a>
+                            </div>
+                            <!-- товары (vue) -->
+                            <div class="cart-list__item ctlt-item" v-cloak v-for="(prod, index) in cart"
+                                :data-cart-item-number="index">
+                                <div class="ctlt-item__image ctlt-item__item">
+                                    <a :href="'../html-products/' + prod.vendorCode + '.html'">
+                                        <img :src="'../img/products/' + products[prod.vendorCode].images[0]" alt="">
+                                    </a>
+                                </div>
+                                <div class="ctlt-item__name ctlt-item__item"
+                                    :data-cart-item-name="products[prod.vendorCode].name + ' (' + prod.color.toLowerCase() + ')'">
+                                    <a :href="'../html-products/' + prod.vendorCode + '.html'">
+                                        {{ products[prod.vendorCode].name }} ({{ prod.color.toLowerCase() }})
+                                    </a>
+                                </div>
+                                <div class="ctlt-item__price ctlt-item__item"
+                                    :data-cart-item-price="products[prod.vendorCode].price">
+                                    <div class="cart-list__title">
+                                        Цена за штуку:
+                                    </div>
+                                    <p>
+                                        {{ products[prod.vendorCode].price.toLocaleString() }} ₽
+                                    </p>
+                                </div>
+                                <div class="ctlt-item__amount ctlt-item__item controls">
+                                    <div class="controls__amount">
+                                        <div class="controls__amount--less controls__amount-button __icon-back-arrow">
+                                        </div>
+                                        <div class="controls__amount--number">
+                                            <input type="text" :value="prod.amount" maxlength="2" @change="amountChange($event)">
+                                        </div>
+                                        <div class="controls__amount--more controls__amount-button __icon-next-arrow">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctlt-item__total ctlt-item__item">
+                                    <div class="cart-list__title cart-list__title--colored">
+                                        Итого:
+                                    </div>
+                                    <p>
+                                        {{ (products[prod.vendorCode].price * prod.amount).toLocaleString() }} ₽
+                                    </p>
+                                </div>
+                                <div class="ctlt-item__cancel ctlt-item__item" @click="delFromCart($event)">
+                                    <div class="ctlt-item__cancel--icon __icon-cancel"></div>
+                                </div>
+                            </div>
+                            <!-- /товары (vue) -->
+                        </div>
+                    </div>
+                    <div class="cart-page__info" :style="{
+                        display: cartIsEmpty ? 'none' : ''
+                    }">
+                        <div class="cart-page__coupon">
+                            <p>Введите Ваш код купона, если он у вас есть:</p>
+                            <form class="text-input">
+                                <div class="text-input__text">
+                                    <input type="text" placeholder="Введите код">
+                                </div>
+                                <button class="text-input__submit">
+                                    <input type="button" value="Активировать">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="cart-total">
+                            <div class="cart-total__text">
+                                Сумма заказа:
+                            </div>
+                            <div class="cart-total__number" v-if="totalPrice">
+                                {{ totalPrice.toLocaleString() }} ₽
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="order-button" :style="{
+                    display: cartIsEmpty ? 'none' : ''
+                }">
+                    <a href="../html-products/order-page.html" class="button button--colored-bg" v-if="totalPrice">
+                        Оформить заказ
+                    </a>
+                </section>
+            </div>
+        </main>
+
+        @@include('../html-snippets/footer.html')
+    </div>
+
+    @@include('../html-snippets/scripts-products.html')
+</body>
+
+</html>

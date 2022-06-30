@@ -1,0 +1,336 @@
+{
+	"400511": {
+		"name": "TWS Airpods Air Bluetooth",
+		"price": 11950,
+		"old-price": "",
+		"images": [
+			"airpods/1.jpg",
+			"airpods/2.png",
+			"airpods/3.jpg",
+			"airpods/4.jpg",
+			"airpods/5.jpg"
+		],
+		"rating": 5,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый"
+				]
+			}
+		}
+	},
+	"400512": {
+		"name": "Xiaomi Mi True Wireless Airdots",
+		"price": 1250,
+		"old-price": 1550,
+		"images": [
+			"airdots/1.jpg",
+			"airdots/2.jpg",
+			"airdots/3.jpg",
+			"airdots/4.jpg",
+			"airdots/5.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Чёрный"
+				]
+			}
+		}
+	},
+	"400513": {
+		"name": "TWS Airpods Pro Air Bluetooth",
+		"price": 20000,
+		"old-price": 24500,
+		"images": [
+			"airpods_pro/1.jpg",
+			"airpods_pro/2.jpg",
+			"airpods_pro/3.jpg",
+			"airpods_pro/4.jpg"
+		],
+		"rating": 5,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый"
+				]
+			}
+		}
+	},
+	"400514": {
+		"name": "TWS Airpods Max Bluetooth",
+		"price": 54000,
+		"old-price": "",
+		"images": [
+			"airpods_max/1.jpg",
+			"airpods_max/2.jpg",
+			"airpods_max/3.jpg",
+			"airpods_max/4.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Чёрный",
+					"Синий",
+					"Хаки",
+					"Красный"
+				]
+			}
+		}
+	},
+	"400515": {
+		"name": "Samsung Galaxy Buds 2",
+		"price": 9900,
+		"old-price": 10990,
+		"images": [
+			"galaxy_buds_2/1.jpg",
+			"galaxy_buds_2/2.jpg",
+			"galaxy_buds_2/3.jpg",
+			"galaxy_buds_2/4.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Чёрный",
+					"Фиолетовый",
+					"Оливковый"
+				]
+			}
+		}
+	},
+	"400516": {
+		"name": "Samsung Gear IconX",
+		"price": 6500,
+		"old-price": "",
+		"images": [
+			"gear_iconx/1.jpg",
+			"gear_iconx/2.jpg",
+			"gear_iconx/3.jpg",
+			"gear_iconx/4.jpg",
+			"gear_iconx/5.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Чёрный",
+					"Синий",
+					"Голубой"
+				]
+			}
+		}
+	},
+	"400517": {
+		"name": "Samsung Galaxy Buds Live",
+		"price": 7900,
+		"old-price": 9700,
+		"images": [
+			"galaxy_buds_live/1.png",
+			"galaxy_buds_live/2.jpg",
+			"galaxy_buds_live/3.jpg",
+			"galaxy_buds_live/4.png",
+			"galaxy_buds_live/5.png"
+		],
+		"rating": 5,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Чёрный",
+					"Бронзовый"
+				]
+			}
+		}
+	},
+	"400518": {
+		"name": "Xiaomi Mi True Wireless Earphones 2",
+		"price": 2500,
+		"old-price": "",
+		"images": [
+			"mi_earphones_2/1.jpg",
+			"mi_earphones_2/2.jpg",
+			"mi_earphones_2/3.jpg",
+			"mi_earphones_2/4.jpg",
+			"mi_earphones_2/5.jpg"
+		],
+		"rating": 3,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый"
+				]
+			}
+		}
+	},
+	"400519": {
+		"name": "Xiaomi Mi In-Ears",
+		"price": 500,
+		"old-price": "",
+		"images": [
+			"mi_in-ear/1.jpg",
+			"mi_in-ear/2.jpg",
+			"mi_in-ear/3.jpg",
+			"mi_in-ear/4.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Чёрный",
+					"Белый",
+					"Серый",
+					"Голубой"
+				]
+			}
+		}
+	},
+	"400520": {
+		"name": "Huawei AM115, 3.5 мм",
+		"price": 500,
+		"old-price": "",
+		"images": [
+			"huawei_am-115/1.jpg",
+			"huawei_am-115/2.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый"
+				]
+			}
+		}
+	},
+	"400521": {
+		"name": "Huawei True Wireless Freebuds",
+		"price": 6500,
+		"old-price": 7250,
+		"images": [
+			"huawei_freebuds/1.jpg",
+			"huawei_freebuds/2.jpg",
+			"huawei_freebuds/3.jpg",
+			"huawei_freebuds/4.jpg"
+		],
+		"rating": 5,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Серый"
+				]
+			}
+		}
+	},
+	"400522": {
+		"name": "Huawei AM61 Sport Lite",
+		"price": 2040,
+		"old-price": "",
+		"images": [
+			"huawei_am-61/1.jpg",
+			"huawei_am-61/2.jpg",
+			"huawei_am-61/3.jpg",
+			"huawei_am-61/4.jpg",
+			"huawei_am-61/5.jpg"
+		],
+		"rating": 3,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Чёрный",
+					"Красный"
+				]
+			}
+		}
+	},
+	"400523": {
+		"name": "JBL Wireless T500BT",
+		"price": 2500,
+		"old-price": 3100,
+		"images": [
+			"jbl_t500bt/1.jpg",
+			"jbl_t500bt/2.jpg",
+			"jbl_t500bt/3.jpg",
+			"jbl_t500bt/4.jpg",
+			"jbl_t500bt/5.jpg"
+		],
+		"rating": 5,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Белый",
+					"Синий",
+					"Чёрный"
+				]
+			}
+		}
+	},
+	"400524": {
+		"name": "JBL Bluetooth Reflect Contour 2",
+		"price": 3500,
+		"old-price": 4220,
+		"images": [
+			"jbl_reflect/1.png",
+			"jbl_reflect/2.jpg",
+			"jbl_reflect/3.jpg",
+			"jbl_reflect/4.jpg",
+			"jbl_reflect/5.jpg"
+		],
+		"rating": 3,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Чёрный",
+					"Красно-белый",
+					"Зелёно-серый",
+					"Серо-синий"
+				]
+			}
+		}
+	},
+	"400525": {
+		"name": "JBL Bluetooth Tune 225 True Wireless",
+		"price": 3000,
+		"old-price": 4000,
+		"images": [
+			"jbl_225tws/1.png",
+			"jbl_225tws/2.jpg",
+			"jbl_225tws/3.jpg",
+			"jbl_225tws/4.png",
+			"jbl_225tws/5.jpg"
+		],
+		"rating": 4,
+		"options": {
+			"color": {
+				"name": "Цвет",
+				"list": [
+					"Чёрный",
+					"Белый",
+					"Синий",
+					"Розовый",
+					"Бронзовый",
+					"Серый"
+				]
+			}
+		}
+	}
+}

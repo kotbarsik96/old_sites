@@ -1,0 +1,19 @@
+<div class="product-card card product-card--type-horizontal" data-vendor-code="@@vendor-code" v-cloak>
+    <div class="card__bottom card__side product-card__bottom"></div>
+    <div class="card__container card__side product-card__container">
+        <a href="../html-products/@@vendor-code.html" class="product-card__image">
+            <img :src="'../img/products/' + products['@@vendor-code'].images[0]" alt="">
+        </a>
+        <div class="product-card__vertical-info">
+            <a href="../html-products/@@vendor-code.html" class="product-card__name">
+                {{ products['@@vendor-code'].name }}
+            </a>
+            <div class="product-card__rating rating">
+                @@include('../html-snippets/rating.html', {'vendor-code': @@vendor-code})
+            </div>
+            <div class="product-card__price">
+                {{ products['@@vendor-code'].price }} ₽
+            </div>
+        </div>
+    </div>
+</div>
