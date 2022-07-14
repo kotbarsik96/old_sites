@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('../html-snippets/head.html')
+</head>
+<body>
+
+    <div class="wrapper">
+        <div id="products-app" class="content" v-cloak>
+            @@include('../html-snippets/header.html')
+            <div class="start-block series__start-block">
+                <div class="start-bg__image" style="background-image: url('../../images/backgrounds/series-page/@@bike-category-series.jpg')"></div>
+
+                <div class="start-block__wrapper">
+                    <div class="start-block__container __container series-block__container">
+                        <div class="series-block__bike bike-block">
+                            <div class="bike-block__container" style="background-image: url('../../images/backgrounds/series-page/@@bike-category-series.jpg')">
+                                <img src="../../images/bicycles/@@bike-name__@@bike-color.png">
+                            </div>
+                        </div>
+                        <div class="series-block__info info-block">
+                            <div class="info-block__header h1">
+                                @@bike-category Series
+                            </div>
+                            <div class="info-block__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis ullam temporibus porro iure fuga id suscipit earum dolorem est sint, atque minus aliquid modi doloribus obcaecati ipsam repudiandae nisi?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta corporis perferendis cum vitae dolore repellendus qui veritatis doloremque natus amet eos consequatur beatae aspernatur, facere aut animi eius earum neque.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <main class="category-page">
+                <div id="slider-example" class="category-page__item" data-product-name="@@bike-name">
+                    <div class="series-item__container __container">
+                        <div class="series-item__info bike-info">
+                            <div class="series-item__info-header bike-info__header">
+                                <div class="series-item__info-name bike-info__name h2">
+                                    {{ json.prodBikes['@@bike-name'].name }}
+                                </div>
+                                <div class="series-item__info-price bike-info__price">
+                                    {{ json.prodBikes['@@bike-name'].price }}
+                                </div>
+                            </div>
+                            <div class="series-item__info-text bike-info__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam corrupti dolorem ducimus harum consequuntur cum quidem, eum consequatur nulla, quibusdam id, consectetur quam aliquid? Explicabo molestias veritatis earum? Autem, ipsum?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed natus veniam quis quisquam excepturi amet rerum inventore, officia ut magni, omnis ea ex labore fuga libero ipsum tempore dicta saepe.
+                                </p>
+                            </div>
+                            <div class="series-item__info-colors bike-info__colors">
+                                @@include('../html-snippets/colors-params.html', { 'bike-name': '@@bike-name' })
+                            </div>
+                            <div class="series-item__button">
+                                <a href="../bike-page/@@bike-name.html" class="button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="series-item__bike">
+                            @@include('bike-slider-snippet.html', { 'bike-name': '@@bike-name' })
+                        </div>
+                    </div>
+                </div>
+                @@include('../html-snippets/category-page-item.html', { 'bike-name': 'streetster-bakerstreet' })
+                @@include('../html-snippets/category-page-item.html', { 'bike-name': 'streetster-broadway' })
+            </main>
+        </div>
+        
+        @@include('../html-snippets/footer.html')
+    </div>
+
+    <!-- =============================================<СКРИПТЫ>========================================= -->
+
+    @@include('scripts.html')
+
+    <!-- =============================================<СКРИПТЫ>========================================= -->
+
+</body>
+</html>

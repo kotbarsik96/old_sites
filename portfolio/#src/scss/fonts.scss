@@ -1,0 +1,94 @@
+// <ОБЫЧНЫЕ ШРИФТЫ>==========================================================================================
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300italic,regular,italic,500,500italic,700,700italic);
+
+// <ИКОНОЧНЫЙ ШРИФТ>=========================================================================================
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/font-icon/icons.eot?h6jm8f");
+  src: url("../fonts/font-icon/icons.eot?h6jm8f#iefix") format("embedded-opentype"),
+    url("../fonts/font-icon/icons.ttf?h6jm8f") format("truetype"),
+    url("../fonts/font-icon/icons.woff?h6jm8f") format("woff"),
+    url("../fonts/font-icon/icons.svg?h6jm8f#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="__icon-"],
+[class*=" __icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.__icon-expand:before {
+  content: "\e900";
+}
+.__icon-arrow:before {
+  content: "\e914";
+}
+.__icon-radio-button-off:before {
+  content: "\e912";
+}
+.__icon-radio-button-on:before {
+  content: "\e913";
+}
+.__icon-cricket:before {
+  content: "\e906";
+}
+.__icon-moon:before {
+  content: "\e911";
+}
+.__icon-checkbox-off:before {
+  content: "\e901";
+}
+.__icon-checkbox-on:before {
+  content: "\e902";
+}
+.__icon-date:before {
+  content: "\e903";
+}
+.__icon-desktop:before {
+  content: "\e904";
+}
+.__icon-filter:before {
+  content: "\e905";
+}
+.__icon-person:before {
+  content: "\e907";
+}
+.__icon-phone:before {
+  content: "\e908";
+}
+.__icon-play-video:before {
+  content: "\e909";
+}
+.__icon-plugin:before {
+  content: "\e90a";
+}
+.__icon-portfolio:before {
+  content: "\e90b";
+}
+.__icon-programming:before {
+  content: "\e90c";
+}
+.__icon-question-mark:before {
+  content: "\e90d";
+}
+.__icon-skills:before {
+  content: "\e90e";
+}
+.__icon-sun:before {
+  content: "\e90f";
+}
+.__icon-web-development:before {
+  content: "\e910";
+}

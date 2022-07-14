@@ -1,0 +1,130 @@
+[
+    {
+        "title": "device",
+        "type": "Интернет-магазин",
+        "features": [
+            "Слайдеры",
+            "Ползунок для установления цены (в фильтре товаров)"
+        ],
+        "url": "https://kotbarsik96.github.io/device/dist/main/index.html",
+        "imgDesktop": "img/sites-photo/device/desktop.webp",
+        "imgMobile": "img/sites-photo/device/mobile.webp",
+        "imgIcon": "img/sites-photo/device/icon.webp",
+        "isDesktop": true
+    },
+    {
+        "title": "GamerShop",
+        "type": "Интернет-магазин",
+        "features": [
+            "Слайдеры",
+            "Анимация при прокрутке страницы"
+        ],
+        "url": "https://kotbarsik96.github.io/gamershop/dist/index.html",
+        "imgDesktop": "img/sites-photo/gamershop/desktop.webp",
+        "imgMobile": "img/sites-photo/gamershop/mobile.webp",
+        "imgIcon": "img/sites-photo/gamershop/icon.webp",
+        "isDesktop": true
+    },
+    {
+        "title": "molecule",
+        "type": "Услуги по разработке ПО",
+        "features": [
+            "Слайдеры"
+        ],
+        "url": "https://kotbarsik96.github.io/molecule/dist/index.html",
+        "imgDesktop": "img/sites-photo/molecule/desktop.webp",
+        "imgMobile": "img/sites-photo/molecule/mobile.webp",
+        "imgIcon": "img/sites-photo/molecule/icon.webp",
+        "isDesktop": true
+    },
+    {
+        "title": "streetster",
+        "type": "Интернет-магазин",
+        "features": [
+            "Слайдеры",
+            "Слайдеры (связанные с выбором цвета)",
+            "Работающая корзина (на JS)"
+        ],
+        "url": "https://kotbarsik96.github.io/streetster/dist/html/index/index.html",
+        "imgDesktop": "img/sites-photo/streetster/desktop.webp",
+        "imgMobile": "img/sites-photo/streetster/mobile.webp",
+        "imgIcon": "img/sites-photo/streetster/icon.svg",
+        "isDesktop": false
+    },
+    {
+        "title": "Takeaway & Delivery",
+        "type": "Онлайн заказ доставки еды",
+        "features": [
+            "Переключаемое меню",
+            "Работающая корзина (на JS)"
+        ],
+        "url": "https://kotbarsik96.github.io/T-D/dist/index.html",
+        "imgDesktop": "img/sites-photo/t-d/desktop.webp",
+        "imgMobile": "img/sites-photo/t-d/mobile.webp",
+        "imgIcon": "img/sites-photo/t-d/icon.webp",
+        "isDesktop": true
+    },
+    {
+        "title": "trevland",
+        "type": "Бронирование путешествий",
+        "features": [
+            "Слайдеры"
+        ],
+        "url": "https://kotbarsik96.github.io/trevland/dist/index.html",
+        "imgDesktop": "img/sites-photo/trevland/desktop.webp",
+        "imgMobile": "img/sites-photo/trevland/mobile.webp",
+        "imgIcon": "img/sites-photo/trevland/icon.svg",
+        "isDesktop": true
+    },
+    {
+        "title": "audiofree",
+        "type": "Интернет-магазин",
+        "features": [
+            "Слайдеры",
+            "Спойлеры",
+            "Работающая корзина (на JS)",
+            "Ползунок для установления цены (в фильтре товаров)"
+        ],
+        "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/index.html",
+        "imgDesktop": "img/sites-photo/audiofree/desktop.webp",
+        "imgMobile": "img/sites-photo/audiofree/mobile.webp",
+        "imgIcon": "img/sites-photo/audiofree/icon.svg",
+        "isDesktop": true
+    },
+    {
+        "title": "webovio",
+        "type": "Креативное агентство",
+        "features": [
+            "Анимация при прокрутке страницы"
+        ],
+        "url": "https://kotbarsik96.github.io/webovio/dist/index.html",
+        "imgDesktop": "img/sites-photo/webovio/desktop.webp",
+        "imgMobile": "img/sites-photo/webovio/mobile.webp",
+        "imgIcon": "img/sites-photo/webovio/icon.svg",
+        "isDesktop": false
+    },
+    {
+        "title": "yebo",
+        "type": "Интернет-магазин",
+        "features": [
+            "Параллакс эффект"
+        ],
+        "url": "https://kotbarsik96.github.io/yebo/dist/index.html",
+        "imgDesktop": "img/sites-photo/yebo/desktop.webp",
+        "imgMobile": "img/sites-photo/yebo/mobile.webp",
+        "imgIcon": "img/sites-photo/yebo/icon.svg",
+        "isDesktop": true
+    },
+    {
+        "title": "resource",
+        "type": "Сайт для фотографов",
+        "features": [
+            "Анимация при прокрутке страницы"
+        ],
+        "url": "https://kotbarsik96.github.io/resource/dist/index.html",
+        "imgDesktop": "img/sites-photo/resource/desktop.webp",
+        "imgMobile": "img/sites-photo/resource/mobile.webp",
+        "imgIcon": "img/sites-photo/resource/icon.svg",
+        "isDesktop": true
+    }
+]

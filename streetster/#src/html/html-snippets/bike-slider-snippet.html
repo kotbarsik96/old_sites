@@ -1,0 +1,16 @@
+<div class="bike-slider swiper-container">
+    <div class="swiper-button-prev swiper-button bike-slider__button bike-slider__button-prev"></div>
+    <div class="swiper-button-next swiper-button bike-slider__button bike-slider__button-next"></div>
+
+    <div class="swiper-pagination bike-slider__pagination"></div>
+
+    <div class="bike-slider__wrapper swiper-wrapper">
+        <div class="bike-slider__slide swiper-slide" v-for="color in json.prodBikes['@@bike-name'].colors.list" :data-color-code="color.code">
+            <div class="bike-slider__slide-image">
+                <picture>
+                    <img :src="color.image" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,435 @@
+// <START-PAGE>===============================================================================================================
+.mainpage__start-block {
+    background: url("../images/backgrounds/startpage.jpg") center/cover no-repeat;
+}
+.mainpage-start {
+    &__text {
+        color: #fff;
+        margin-bottom: 25px;
+        &-small {
+            @include text_size(24, 31);
+            text-transform: uppercase;
+        }
+        &-big.h1 {
+            margin-top: 10px;
+            @include adaptive-font-mobile(64, 40);
+            @media (max-width: 767px) {
+                line-height: 50px;
+            }
+        }
+    }
+
+    &__button.button {
+        @include text_size(18, 23);
+        color: #fff;
+    }
+}
+// <START-PAGE>===============================================================================================================
+
+// <MAIN-PAGE>================================================================================================================
+.mainpage {
+    &__block-1 {
+        padding: 120px 0 160px 0;
+        background: url("../images/backgrounds/mainpage-vector1.svg") center/cover no-repeat;
+    }
+    &__block-2 {
+        // background: url('../images/backgrounds/mainpage-vector2.svg') top right/contain no-repeat;
+        background-image: url("../images/backgrounds/mainpage-vector2.svg");
+        background-position: top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (max-width: 1440px) {
+            background-size: cover;
+        }
+        .__container {
+            padding: 80px 0 0 0;
+        }
+    }
+    &__block-3 {
+        min-height: 500px;
+        background: url("../images/backgrounds/ufo.png") left/contain no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 699px){
+            background: url("../images/backgrounds/ufo.png") center/cover no-repeat;
+        }
+    }
+}
+
+// <MAIN-PAGE>================================================================================================================
+
+// <CATEGORIES>===============================================================================================================
+.categories{
+    margin-bottom: 170px;
+}
+@media (max-width: 993px) {
+    .categories-slider {
+        height: 30vw;
+
+        &__arrow {
+            &::after,
+            &::before {
+                font-size: 32px;
+            }
+        }
+
+        &__prev {
+            left: 25px;
+        }
+
+        &__next {
+            right: 25px;
+        }
+
+        &__wrapper {
+            height: 100%;
+        }
+
+        &__slide {
+            height: 100%;
+        }
+    }
+    .ctsl-slide {
+        &__container {
+            background-size: 150% 150%;
+        }
+    }
+}
+
+.categories-slider {
+    &__arrow {
+        color: #fff;
+        &::after,
+        &::before {
+            @include adaptive-font-pc(35, 18);
+        }
+    }
+
+    &__prev {
+        left: 100px;
+    }
+
+    &__next {
+        right: 100px;
+    }
+
+    &__slide {
+        height: 17vw;
+    }
+}
+.ctsl-slide {
+    &__container {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bike {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+.slide-bike {
+    &__image,
+    &__text {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__image {
+        width: 45%;
+        height: 75%;
+    }
+
+    &__text {
+        width: 35%;
+        height: 10%;
+    }
+}
+
+@media (min-width: 2400px){
+    .categories-slider{
+        &__slide{
+            height: 410px;
+        }
+    }
+}
+
+// <CATEGORIES>===============================================================================================================
+
+// <FAVORITE PRODUCTS>========================================================================================================
+.favorites {
+    .h1 {
+        min-height: 60px;
+    }
+}
+.products {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    min-height: 450px;
+    &__block {
+        background: #000;
+    }
+
+    &__block-big {
+        flex: 0 0 746px;
+        position: relative;
+    }
+
+    &__block-small {
+        flex: 0 0 521px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 35px;
+    }
+}
+.block-big {
+    &__text {
+        max-width: 606px;
+        margin: 0 auto;
+        text-align: right;
+        height: 100%;
+        position: relative;
+        .h2 {
+            padding-top: 65px;
+        }
+        p {
+            font-size: 18px;
+            @include adaptive-font-mobile(18, 16);
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        max-width: 68%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__subtract {
+        position: absolute;
+        bottom: 52px;
+        right: 50px;
+        a {
+            display: block;
+        }
+    }
+}
+.block-small {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        .block-small__item-container {
+            @include scale-link-all(0.4s, ease, 0s);
+        }
+    }
+
+    &__image {
+        margin: 0 0 25px 0;
+        text-align: center;
+        min-height: 100px;
+    }
+
+    &__text {
+        @include text_size(24, 31);
+    }
+}
+
+@media (max-width: 1320px) {
+    // весь адаптив, в том числе мобайл
+    .favorites {
+        &__container.__container {
+            padding: 0 20px;
+            @media (max-width: 767px) {
+                padding: 0 10px;
+            }
+        }
+    }
+    .products {
+        flex-wrap: wrap;
+
+        &__block-big {
+            flex: 0 0 100%;
+            min-height: 450px;
+            margin: 0 0 35px 0;
+        }
+
+        &__block-small {
+            flex: 0 0 100%;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media (max-width: 890px) {
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 400px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    .block-big {
+        &__text {
+            @media (max-width: 767px) {
+                max-width: 80%;
+            }
+            .h2 {
+                @include adaptive-font-mobile(40, 20);
+            }
+        }
+    }
+}
+// <FAVORITE PRODUCTS>========================================================================================================
+
+// <BIKES DESCRIPTION>========================================================================================================
+.describe {
+    &__item {
+        text-align: center;
+        flex: 0 0 330px;
+        min-height: 300px;
+        @media (max-width: 1120px) {
+            flex: 0 0 40%;
+            @media (max-width: 660px) {
+                flex: 0 0 90%;
+            }
+        }
+    }
+
+    &__image {
+        width: 134px;
+        height: 134px;
+    }
+}
+// <BIKES DESCRIPTION>========================================================================================================
+
+// <NEWS>=====================================================================================================================
+.news {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__image {
+        width: 338px;
+        height: 288px;
+        &-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__header {
+        height: 90px;
+    }
+
+    &__text {
+        height: 110px;
+        @include text_size(18, 23);
+    }
+
+    &__header,
+    &__text {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        width: 100%;
+        margin: 0 auto;
+        min-height: 22px;
+        box-sizing: border-box;
+    }
+
+    .news-slider-button {
+        &::after {
+            color: #000;
+            font-size: 33px;
+        }
+        @media (max-width: 440px) {
+            display: none;
+        }
+    }
+
+    &__container,
+    &__button {
+        margin: 20px auto 0 auto;
+        max-width: 70%;
+        @media (min-width: 890px) {
+            max-width: 340px;
+        }
+    }
+    .news-slider__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.news-slider.swiper-container {
+    padding-bottom: 50px;
+    @media (min-width: 768px) {
+        .streetster-slider__pagination {
+            display: none;
+        }
+    }
+}
+// <NEWS>=====================================================================================================================
+
+// <MAILING-SUB>==============================================================================================================
+.mailing-subscribe {
+    &__header {
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input {
+        margin: 30px auto;
+        width: 60%;
+    }
+
+    &__button {
+        width: 252px;
+        input {
+            cursor: pointer;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 599px){
+        &__input{
+            width: 100%;
+        }
+    }
+}
+// <MAILING-SUB>==============================================================================================================

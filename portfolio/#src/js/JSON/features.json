@@ -1,0 +1,122 @@
+{
+    "video": [
+        {
+            "id": "scroll-anim",
+            "name": "анимации при прокрутке",
+            "presentation": {
+                "src": "video/features/scroll-anim.mp4",
+                "src-vertical": "video/features/scroll-anim-mb.mp4"
+            },
+            "examples": [
+                {
+                    "text": "GamerShop",
+                    "url": "https://kotbarsik96.github.io/gamershop/dist/index.html"
+                },
+                {
+                    "text": "Webovio",
+                    "url": "https://kotbarsik96.github.io/webovio/dist/index.html"
+                },
+                {
+                    "text": "Resource",
+                    "url": "https://kotbarsik96.github.io/resource/dist/index.html"
+                }
+            ]
+        },
+        {
+            "id": "range",
+            "name": "ползунок",
+            "presentation": {
+                "src": "video/features/range.mp4",
+                "src-vertical": "video/features/range-mb.mp4"
+            },
+            "examples": [
+                {
+                    "text": "AudioFreeDesign",
+                    "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/catalogue.html#range-example"
+                },
+                {
+                    "text": "Device",
+                    "url": "https://kotbarsik96.github.io/device/dist/main/catalogue.html#range-example"
+                }
+            ]
+        },
+        {
+            "id": "slider",
+            "name": "слайдер",
+            "presentation": {
+                "src": "video/features/sliders.mp4",
+                "src-vertical": "video/features/sliders-mb.mp4"
+            },
+            "examples": [
+                {
+                    "text": "AudioFreeDesign (на главной странице несколько слайдеров)",
+                    "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/index.html"
+                },
+                {
+                    "text": "Streetster (связан с кружочками выбора цвета)",
+                    "url": "https://kotbarsik96.github.io/streetster/dist/html/categories/category-street.html#slider-example"
+                },
+                {
+                    "text": "Trevland",
+                    "url": "https://kotbarsik96.github.io/trevland/dist/index.html#slider-example"
+                },
+                {
+                    "text": "Device",
+                    "url": "https://kotbarsik96.github.io/device/dist/main/index.html"
+                },
+                {
+                    "text": "Molecule",
+                    "url": "https://kotbarsik96.github.io/device/dist/main/index.html#slider-example"
+                }
+            ]
+        },
+        {
+            "id": "spoiler",
+            "name": "спойлер",
+            "presentation": {
+                "src": "video/features/spoilers.mp4"
+            },
+            "examples": [
+                {
+                    "text": "AudioFreeDesign (классический спойлер активируется на мобильной версии)",
+                    "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/index.html#spoiler-toggler-example"
+                }
+            ]
+        },
+        {
+            "id": "popup",
+            "name": "всплывающее уведомление",
+            "presentation": {
+                "src": "video/features/popup.mp4",
+                "src-vertical": "video/features/popup-mb.mp4"
+            },
+            "examples": [
+                {
+                    "text": "AudioFreeDesign (для вызова нужно совершить действие с товаром, например: добавить в корзину/избранное, удалить из корзины/избранного)",
+                    "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/catalogue.html"
+                }
+            ]
+        },
+        {
+            "id": "toggler",
+            "name": "переключаемое меню",
+            "presentation": {
+                "src": "video/features/toggler.mp4",
+                "src-vertical": "video/features/toggler-mb.mp4"
+            },
+            "examples": [
+                {
+                    "text": "AudioFreeDesign (на компьютерной версии показывается вместо спойлеров)",
+                    "url": "https://kotbarsik96.github.io/audiofree/dist/html-main/index.html#spoiler-toggler-example"
+                },
+                {
+                    "text": "Takeaway & Delivery",
+                    "url": "https://kotbarsik96.github.io/T-D/dist/index.html#toggler-example"
+                }
+            ]
+        }
+    ],
+    "images": [
+        
+    ]
+}

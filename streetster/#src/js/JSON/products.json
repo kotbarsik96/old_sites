@@ -1,0 +1,138 @@
+{
+    "bikes": {
+        "streetster-nathan": {
+            "name": "Streetster Nathan",
+            "price": "12000 ₴",
+            "image": "../../images/bicycles/streetster-nathan__white.png",
+            "colors": {
+                "name": "Цвет",
+                "list": [
+                    {
+                        "name1": "white",
+                        "name2": "белый",
+                        "code": "#fff",
+                        "image": "../../images/bicycles/streetster-nathan__white.png"
+                    },
+                    {
+                        "name1": "grey",
+                        "name2": "серый",
+                        "code": "#afb6b8",
+                        "image": "../../images/bicycles/streetster-nathan__grey.png"
+                    },
+                    {
+                        "name1": "red",
+                        "name2": "красный",
+                        "code": "#FF5A5A",
+                        "image": "../../images/bicycles/streetster-nathan__red.png"
+                    },
+                    {
+                        "name1": "blue",
+                        "name2": "синий",
+                        "code": "#5A88FF",
+                        "image": "../../images/bicycles/streetster-nathan__blue.png"
+                    }
+                ]
+            },
+            "params": {
+                "frame": {
+                    "name": "Рама",
+                    "list": [
+                        "54 ”/163-170 см",
+                        "57 ”/178-183 см"
+                    ]
+                }
+            },
+            "add_accessories": [
+                "octane-helmet",
+                "canyon-protect"
+            ]
+        },
+        "streetster-bakerstreet": {
+            "name": "Streetster Bakerstreet",
+            "price": "10000 ₴",
+            "image": "../../images/bicycles/streetster-bakerstreet__white.png",
+            "colors": {
+                "name": "Цвет",
+                "list": [
+                    {
+                        "name1": "white",
+                        "name2": "белый",
+                        "code": "#fff",
+                        "image": "../../images/bicycles/streetster-bakerstreet__white.png"
+                    },
+                    {
+                        "name1": "red",
+                        "name2": "красный",
+                        "code": "#FF5A5A",
+                        "image": "../../images/bicycles/streetster-bakerstreet__red.png"
+                    },
+                    {
+                        "name1": "blue",
+                        "name2": "синий",
+                        "code": "#5A88FF",
+                        "image": "../../images/bicycles/streetster-bakerstreet__blue.png"
+                    }
+                ]
+            },
+            "params": {
+                "frame": {
+                    "name": "Рама",
+                    "list": [
+                        "54 ”/163-170 см",
+                        "57 ”/178-183 см"
+                    ]
+                }
+            },
+            "add_accessories": [
+                "octane-helmet"
+            ]
+        },
+        "streetster-broadway": {
+            "name": "Streetster Broadway",
+            "price": "15000 ₴",
+            "image": "../../images/bicycles/streetster-nathan__blue.png",
+            "colors": {
+                "name": "Цвет",
+                "list": [
+                    {
+                        "name1": "blue",
+                        "name2": "синий",
+                        "code": "#3A5675",
+                        "image": "../../images/bicycles/streetster-broadway__blue.png"
+                    },
+                    {
+                        "name1": "yellow",
+                        "name2": "желтый",
+                        "code": "#ffef00",
+                        "image": "../../images/bicycles/streetster-broadway__yellow.png"
+                    }
+                ]
+            },
+            "params": {
+                "frame": {
+                    "name": "Рама",
+                    "list": [
+                        "54 ”/163-170 см",
+                        "57 ”/178-183 см"
+                    ]
+                }
+            },
+            "add_accessories": [
+                "octane-helmet",
+                "canyon-protect"
+            ]
+        }
+    },
+    "accessories": {
+        "octane-helmet": {
+            "name": "Шлем Octane",
+            "price": "600 ₴",
+            "image": "../../images/favorite-products/octane-helmet.png"
+        },
+        "canyon-protect": {
+            "name": "Защита Canyon",
+            "price": "500 ₴",
+            "image": "../../images/favorite-products/canyon-protect.png"
+        }
+    }
+}

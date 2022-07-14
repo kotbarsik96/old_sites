@@ -1,0 +1,69 @@
+<div class="cart aside-menu">
+    <div class="cart__wrapper aside-menu__wrapper">
+        <div class="cart__container aside-menu__container">
+            <div class="cart__icons">
+                <div class="icon__cart menu-button">
+                    <div class="icon__cart-image __icon-cart"></div>
+                </div>
+            </div>
+
+            <div class="cart__amount" v-if="cart.storageLength > 0">
+                Товаров в корзине: {{ cart.storageLength }}
+            </div>
+            <div class="cart__amount" v-else>
+                Корзина пуста
+            </div>
+
+            <div class="cart__content cart-content">
+                <div class="cart-content__item" v-for="(prod, prodIndex) in cart.storage">
+                    <div class="cart-content__body">
+                        <div class="cart-content__image">
+                            <picture>
+                                <img :src="prod.params.color.addInfo.image" alt="">
+                            </picture>
+                        </div>
+                        <div class="cart-content__info">
+                            <div class="cart-content__name">
+                                {{ prod.name }}
+                            </div>
+                            <div class="cart-content__price">
+                                {{ prod.prodPrice }}
+                            </div>
+                        </div>
+                        <div class="cart-content__remove" @click="removeFromCart(prodIndex)">
+                            <div class="delete-cross"></div>
+                        </div>
+                    </div>
+                    <div class="cart-content__accs">
+                        <div class="cart-content__item" v-for="(acc, accIndex) in prod.accs">
+                            <div class="cart-content__image">
+                                <picture>
+                                    <img :src="acc.image" alt="">
+                                </picture>
+                            </div>
+                            <div class="cart-content__info">
+                                <div class="cart-content__name">
+                                    {{ acc.name }}
+                                </div>
+                                <div class="cart-content__price">
+                                    {{ acc.price }}
+                                </div>
+                            </div>
+                            <div class="cart-content__remove"
+                                @click="removeFromCart(prodIndex, cart.storage, accIndex)">
+                                <div class="delete-cross"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__total" v-if="cart.storageLength > 0">
+                <span class="__bold">Итого:</span>
+                {{ cart.totalPrice.toLocaleString() }} ₴
+            </div>
+        </div>
+        <div class="cart__order-button">
+            <a href="../order-page/order-page.html" class="button button-bw">Заказать</a>
+        </div>
+    </div>
+</div>

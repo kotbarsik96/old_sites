@@ -1,0 +1,192 @@
+// <START-PAGE>=====================================================================================================================
+.series{
+    &__start-block{
+        .start-block__wrapper{
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+}
+.series-block {
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__bike {
+        flex: 0 0 635px;
+    }
+
+    &__info {
+        flex: 0 0 625px;
+        color: #fff;
+    }
+}
+.bike-block {
+    
+    &__container {
+        min-height: 485px;
+        transform: skew(-15deg, 0);
+        overflow: hidden;
+        background-size: 380px 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        img{
+            position: relative;
+            right: 25px;
+            transform: skew(15deg, 0);
+            max-width: 100%;
+        }
+    }
+}
+.info-block {
+
+    &__header.h1 {
+        text-transform: uppercase;
+        @include adaptive-font-mobile(64, 40);
+    }
+
+    &__text {
+        @include text_size(18, 23);
+        padding: 40px 0;
+        p{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1480px){
+    .series-block{
+        &__container{
+            justify-content: center;
+        }
+        &__bike{
+            flex: 0 0 40%;
+        }
+        &__info{
+            flex: 0 0 45%;
+        }
+    }
+    .bike-block{
+        &__container{
+            min-height: 450px;
+            background-size: 300px 100%;
+        }
+    }
+}
+
+@media (max-width: 1180px){
+    .series-block{
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__bike{
+            flex: 0 0 465px;
+        }
+        &__info{
+            flex: 0 0 100%;
+        }
+    }
+    .bike-block{
+        margin: 15px 0 30px 0;
+        &__container{
+            min-height: 350px;
+            background-size: 240px 100%;
+            background-position: center;
+            overflow: visible;
+            img{
+                right: 0;
+            }
+        }
+    }
+    .info-block{
+
+        &__header{
+            text-align: center;
+        }
+
+        &__text{
+            padding: 20px 0;
+            p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px){
+    .series-block{
+        &__bike{
+            flex: 0 0 70%;
+        }
+    }
+    .bike-block{
+        &__container{
+            min-height: 250px;
+            background-size: contain;
+        }
+    }
+}
+// <START-PAGE>=====================================================================================================================
+
+
+// <BIKE-ITEM>======================================================================================================================
+.category-page{
+
+    &__item{
+        border-bottom: 1px solid #000;
+        padding: 80px 0 65px 0;
+    }
+}
+.series-item{
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 560px;
+    }
+    &__info{
+        flex: 0 0 305px;
+        min-height: 560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__bike{
+        flex: 0 0 860px;
+        min-width: 0;
+    }
+    &__button{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1229px){
+    .series-item{
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__bike{
+            flex: 0 0 100%;
+            .bike-slider{
+                &__slide{
+                    min-height: 0;
+                    margin: 60px 0;
+                }
+            }
+        }
+        &__info{
+            flex: 0 0 100%;
+            min-height: 0;
+        }
+        &__button{
+            width: 80%;
+        }
+    }   
+}
+// <BIKE-ITEM>======================================================================================================================

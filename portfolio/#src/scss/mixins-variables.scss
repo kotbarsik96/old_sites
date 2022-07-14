@@ -1,0 +1,41 @@
+// разрешения экранов
+$screenSize: 1190;
+$mobile: 767px;
+$tablet: 992px;
+$smallDesktop: 1099px;
+
+// длительность перехода цвета подсвечиваемых элементов
+$transitionSelected: 0.5s;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+    $adaptSize: $pcSize - $mobSize;
+    $devAdaptSize: $adaptSize + $adaptSize * 0.7;
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize}px + #{$devAdaptSize} * (100vw - 320px) / #{$screenSize});
+    }
+    @media (min-width: 768px) {
+        font-size: calc(#{$mobSize}px + #{$adaptSize} * (100vw /#{$screenSize}));
+    }
+}
+@mixin line-height($font-size, $line-height) {
+    line-height: calc($line-height / $font-size * 100%);
+}
+
+// width - ширина изображения, height - высота изображения, percentSize - ширина в % от размера screenSize
+@mixin adaptive-background($width, $height, $percentSize) {
+    $ratio: calc($width / $height);
+    $fractionSize: calc($percentSize / 100);
+
+    $widthValue: calc($screenSize * $fractionSize);
+    $heightValue: calc($widthValue / $ratio);
+
+    width: #{$widthValue}px;
+    height: #{$heightValue}px;
+    @media (max-width: #{$screenSize - 1}px) {
+        $widthValue: calc((0px + 100vw - 20px) * $fractionSize);
+        $heightValue: calc($widthValue / $ratio);
+
+        width: #{$widthValue};
+        height: #{$heightValue};
+    }
+}

@@ -1,0 +1,28 @@
+<a href="@@bike-name.html" class="other-models__item">
+    <div class="other-models__image">
+        <picture>
+            <img :src="'../../images/bicycles/' + json.prodBikes['@@bike-name']['image']" alt="">
+        </picture>
+    </div>
+    <div class="other-models__info">
+        <div class="models-info__container">
+            <div class="models-info__name-price">
+                <div class="models-info__name h2">
+                    {{ json.prodBikes['@@bike-name'].name }}
+                </div>
+                <div class="models-info__price">
+                    {{ json.prodBikes['@@bike-name'].price }}
+                </div>
+            </div>
+            <div class="models-info__colors">
+                <div class="colors__circles params__figures">
+                    <div class="colors__wrapper param__wrapper" v-for="color in json.prodBikes['@@bike-name'].colors.list">
+                        <div class="colors__circle-big param__item">
+                            <div class="colors__circle-small param__subitem" :style="'background-color:' + color.code"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>

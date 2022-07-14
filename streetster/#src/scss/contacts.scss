@@ -1,0 +1,117 @@
+.contacts {
+    padding-bottom: 65px;
+    background: url('../images/backgrounds/blog/vector-2.svg') center/cover;
+    @include text_size(18, 23);
+
+    &__title {
+        padding-top: 80px;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__numbers {
+        flex: 0 0 50%;
+    }
+
+    &__image {
+        flex: 0 0 50%;
+        img{
+            max-width: 100%;
+        }
+    }
+    
+    &__adds-item {
+        margin: 15px 0;
+        color: rgb(80, 80, 80);
+    }
+}
+.numbers {
+
+    &__item{
+        margin: 20px 0;
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__phones {
+        flex:  0 0 50%;
+    }
+
+    &__phone-item {
+        color: rgb(0, 39, 145);
+        @include text_size(24, 30);
+    }
+
+    &__schedule {
+        flex:  0 0 50%;
+    }
+
+    &__schedule-title {
+        font-family: 'Futura PT Bold';
+    }
+
+    &__schedule-info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+// .schedule-info {
+
+//     &__days {
+//     }
+
+//     &__time {
+//     }
+// }
+
+.contacts-image{
+    
+    &__container{
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 75%;
+        background-position: left;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        transform: skew(-15deg);
+        img{
+            transform: skew(15deg);
+        }
+    }
+}
+
+@media (max-width: 1029px){
+    .contacts{
+
+        &__numbers{
+            flex: 0 0 100%;
+        }
+
+        &__image{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 529px){
+    .numbers{
+        &__info{
+            display: block;
+        }
+        &__phones{
+            margin: 20px 0;
+        }
+        &__phone-item{
+            text-align: center;
+        }
+    }
+}

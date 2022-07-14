@@ -1,0 +1,15 @@
+<div class="colors params" data-param-name="color">
+    <div class="colors__text params__text">
+        Доступно в цветах:
+    </div>
+    <form class="colors__circles params__figures" @change="getProdInfo()">
+        <label class="colors__wrapper param__wrapper"
+            v-for="(color, colorIndex) in json.prodBikes['@@bike-name'].colors.list">
+            <input type="radio" name="param-color-@@bike-name" :data-color-code="color.code" :data-param-index="colorIndex">
+            <div class="colors__circle-big param__item">
+                <div class="colors__circle-small param__subitem"
+                    :style="'background-color:' + color.code"></div>
+            </div>
+        </label>
+    </form>
+</div>

@@ -1,0 +1,57 @@
+// <ПЕРЕМЕННЫЕ>================================================================================================
+// размер экрана
+$screenSize: 1920;
+$screenSizeMob: 770;
+
+// transition у шапки
+$fixHeaderDur: 1;
+$fixHeaderDelay: .4;
+
+// <ПЕРЕМЕННЫЕ>================================================================================================
+
+@mixin adaptive-font-all($pcSize, $mobSize) {
+    $adaptSize: $pcSize - $mobSize;
+    $devAdaptSize: $adaptSize + $adaptSize * 0.7;
+    @media (max-width: 767px){
+        font-size: calc(#{$mobSize + px} + #{$devAdaptSize} * (100vw - 320px) / #{$screenSize});
+    }
+    @media (min-width: 768px){
+        font-size: calc(#{$mobSize + px} + #{$adaptSize} * (100vw/#{$screenSize}));
+    }
+}
+
+@mixin adaptive-font-pc($pcSize, $mobSize){
+    $adaptSize: $pcSize - $mobSize;
+    @media (min-width: 768px){
+        font-size: calc(#{$mobSize + px} + #{$adaptSize} * (100vw/#{$screenSize}));
+    }
+}
+
+@mixin adaptive-font-mobile($pcSize, $mobSize){
+    $adaptSize: $pcSize - $mobSize;
+    $devAdaptSize: $adaptSize + $adaptSize * 0.7;
+    @media (max-width: 767px){
+        font-size: calc(#{$mobSize + px} + #{$devAdaptSize} * (100vw - 320px) / #{$screenSizeMob});
+    }
+}
+
+@mixin scale-link-all($duration, $prop, $delay){
+    transition: transform #{$duration} #{$prop} #{$delay};
+    transform: scale(1);
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+@mixin scale-link-pc($duration, $prop, $delay){
+    transition: transform #{$duration} #{$prop} #{$delay};
+    &:hover{
+        @media (min-width: 768px){
+            transform: scale(1.05);
+        }
+    }
+}
+
+@mixin text_size($font_size, $line_height) {
+    font-size: #{$font_size + px};
+    line-height: calc(#{$line_height} / #{$font_size} * 100%);
+}

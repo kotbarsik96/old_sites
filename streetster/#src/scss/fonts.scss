@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'Futura PT Bold';
+	src: url('../fonts/futura-pt/futura_pt_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/futura-pt/futura_pt_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/futura-pt/futura_pt_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/futura-pt/futura_pt_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/futura-pt/futura_pt_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/futura-pt/futura_pt_bold.svg#futura_pt_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'Futura PT';
+	src: url('../fonts/futura-pt/futura_pt_medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/futura-pt/futura_pt_medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/futura-pt/futura_pt_medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/futura-pt/futura_pt_medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/futura-pt/futura_pt_medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/futura-pt/futura_pt_medium.svg#futura_pt_medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+
+
+
+
+@font-face {
+	font-family: 'icons';
+	src:  url('../fonts/icon-fonts/icons.eot?rbsr5g');
+	src:  url('../fonts/icon-fonts/icons.eot?rbsr5g#iefix') format('embedded-opentype'),
+	  url('../fonts/icon-fonts/icons.ttf?rbsr5g') format('truetype'),
+	  url('../fonts/icon-fonts/icons.woff?rbsr5g') format('woff'),
+	  url('../fonts/icon-fonts/icons.svg?rbsr5g#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+  
+  [class^="__icon-"], [class*=" __icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icons' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  .__icon-socials::before {
+	content: "\e902";
+	color: #fff;
+  }
+  .__icon-cart:before {
+	content: "\e900";
+	color: #fff;
+  }
+  .__icon-loopa:before {
+	content: "\e901";
+  }
+  .__icon-star:before {
+	content: "\e903";
+  }
+  

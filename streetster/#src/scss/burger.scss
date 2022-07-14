@@ -1,0 +1,48 @@
+.icon__menu {
+    display: block;
+    width: 26px;
+    height: 20px;
+    position: relative;
+    z-index: 80;
+    cursor: pointer;
+    span{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        &:first-child{
+            transition: transform .5s ease, top .5s ease .2s;
+            top: 0;
+            transform: rotate(0deg);
+        }
+        &:nth-child(2){
+            transition: opacity .5s .2s;
+            top: 50%;
+        }
+        &:last-child{
+            transition: transform .5s ease, top .5s ease .2s;
+            top: 100%;
+            transform: rotate(0deg);
+        }
+    }
+}
+.icon__menu.__active{
+    span{
+        &:first-child{
+            transition: transform .5s ease .2s, top .5s ease;
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2){
+            transition: opacity .1s .2s;
+            opacity: 0;
+        }
+        &:last-child{
+            transition: transform .5s ease .2s, top .5s ease;
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    }
+}

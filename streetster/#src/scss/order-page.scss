@@ -1,0 +1,149 @@
+// <START-PAGE>===============================================================================================================
+.order-start.start-block{
+    min-height: 0;
+}
+.order-start{
+    &__header.h1{
+        text-align: center;
+        margin: 50px auto;
+        @include adaptive-font-mobile(64, 40);
+    }
+}
+// <START-PAGE>===============================================================================================================
+
+
+// <MAIN-PAGE>================================================================================================================
+.order-page{
+    margin-bottom: 100px;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart{
+        flex: 0 0 40%;
+
+        &__buttons{
+            @media (max-width: 1149px){
+                flex-wrap: wrap;
+                .button{
+                    flex: 0 0 100%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .result{
+            &__container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+            }
+        
+            &__info {
+                flex: 0 1 45%;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                overflow: hidden;
+                @include text_size(16, 23);
+            }
+        
+            &__header {
+                text-transform: uppercase;
+                font-family: 'Futura PT Bold';
+                overflow: hidden;
+            }
+        
+            &__price{
+                text-align: center;
+                flex: 0 0 25%;
+                overflow: hidden;
+            }   
+
+            @media (max-width: 429px){
+                &__image{
+                    width: 110px;
+                    height: 110px;
+                    padding: 7px;
+                    box-sizing: border-box;
+                    position: absolute;
+                    left: 45%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .4s ease;
+                }
+                &__image.__visible{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .user-info{
+        flex: 0 0 49%;
+    }
+}
+@media (max-width: 1049px){
+    .order-page{
+        &__container{
+            flex-wrap: wrap;
+            
+        }
+        .cart, .user-info{
+            flex: 0 0 700px;
+            margin: 0 auto;
+            @media (max-width: 767px){
+                flex: 0 0 100%;
+            }
+        }
+        .cart{
+            margin-bottom: 25px;
+            .result{
+                @media (max-width: 559px){
+                    &__container{
+                        padding: 18px 9px;
+                    }
+
+                    &__amount > .button-to_cart.__controls{
+                        flex-direction: column-reverse;
+                        &::before, &::after{
+                            margin: 0;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+// <MAIN-PAGE>================================================================================================================
+
+
+// <USER-DATA>================================================================================================================
+.user-info {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+// <USER-DATA>================================================================================================================
+
+
+// <BIKE-ORDER>===============================================================================================================
+.bike-order{
+    &__button{
+        cursor: pointer;
+    }
+}
+// <BIKE-ORDER>===============================================================================================================
+
+
+// <ADD TO CART>==============================================================================================================
+.__add-to-cart{
+    transition: transform 1s ease 0s;
+}
+// <ADD TO CART>==============================================================================================================
